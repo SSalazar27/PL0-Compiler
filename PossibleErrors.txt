@@ -1,0 +1,404 @@
+File containing all of the possible errors outputted by my Parser, and the inputs that caused them
+==============================
+Input:
+const x := 3;
+var y;
+begin
+  if const = 3 then
+    y := 5;
+end.
+
+Output:
+Use = instead of :=
+===============================
+
+==============================
+Input:
+const x = p;
+var y;
+begin
+  y := x + 3;
+end.
+
+Output:
+= must be followed by a number
+===============================
+
+==============================
+Input:
+const x is p;
+var y;
+begin
+  y := x + 3;
+end.
+
+Output:
+Identifier must be followed by =
+===============================
+
+==============================
+Input:
+var 3, x, y;
+begin
+  y := x + 3;
+end.
+
+
+Output:
+const, var, must be followed by identifier
+===============================
+
+==============================
+Input:
+var x y;
+begin
+  x := 3;
+  y := x + 3;
+end.
+
+
+Output:
+Semicolon or comma missing
+===============================
+
+==============================
+Input:
+var x, y;
+begin
+  x := 3;
+  y := x + 3;
+end
+
+Output:
+Period expected
+===============================
+
+==============================
+Input:
+var y;
+begin
+  x := 3;
+  y := x + 3;
+end.
+
+Output:
+Undeclared identifier
+===============================
+
+===============================
+Input:
+const z = 4;
+var x, y;
+begin
+  x := 3;
+  z := x + 3;
+end.
+
+Output:
+Assignment to constant or procedure not allowed
+===============================
+
+==============================
+Input:
+var x, y;
+begin
+  x = 3;
+  y := x + 3;
+end.
+
+Output:
+Assignment operator expected
+===============================
+
+==============================
+Input:
+var f, n;
+procedure fact;
+  var ans1;
+  begin
+    ans1:=n;
+    n:= n-1;
+    if n = 0 then f := 1;
+    if n > 0 then call fact;
+    f:=f*ans1;
+  end;
+begin
+  n:=3;
+  call 3;
+  write f
+end.
+
+Output:
+call must be followed by an identifier
+===============================
+
+==============================
+Input:
+var f, n;
+procedure fact;
+  var ans1;
+  begin
+    ans1:=n;
+    n:= n-1;
+    if n = 0 then f := 1;
+    if n > 0 then call fact;
+    f:=f*ans1;
+  end;
+begin
+  n:=3;
+  call f;
+  write f
+end.
+
+Output:
+Call of a constant or variable is meaningless
+===============================
+
+==============================
+Input:
+var f, n;
+procedure fact;
+  var ans1;
+  begin
+    ans1:=n;
+    n:= n-1;
+    if n = 0 f := 1;
+    if n > 0 then call fact;
+    f:=f*ans1;
+  end;
+begin
+  n:=3;
+  call f;
+  write f
+end.
+
+Output:
+then expected
+===============================
+
+==============================
+var x, y;
+begin
+  x := 1;
+  y := 10;
+
+  while x < y
+    x := x + 1;
+end.
+
+Output:
+do expected
+===============================
+
+==============================
+Input:
+var f, n;
+procedure fact;
+  var ans1;
+  begin
+    ans1:=n;
+    n:= n-1;
+    if n = 0 then f := 1;
+    if n > 0 then call fact;
+    f:=f*ans1;
+  end;
+begin
+  n:=3;
+  call fact;
+  write f
+.
+
+Output:
+end symbol expected
+===============================
+
+==============================
+Input:
+var x, y;
+begin
+  x := 1;
+  y := 10;
+
+  while x := y do
+    x := x + 1;
+end.
+
+Output:
+Relational operator expected
+===============================
+
+==============================
+Input:
+var x, y, z;
+begin
+  x := 1;
+  y := 10;
+
+  z := 3 * (x + y;
+end.
+
+Output:
+Right parenthesis missing
+===============================
+
+==============================
+Input:
+var x, y, z;
+begin
+  x := 1;
+  y := 10;
+
+  z := 3 * =x + y);
+end.
+
+Output:
+The preceding factor cannot begin with this symbol
+===============================
+
+==============================
+Input:
+var x, y, z;
+begin
+  x := 1;
+  y := 10;
+
+  read 3;
+end.
+
+Output:
+Variable expected after read
+===============================
+
+==============================
+Input:
+var x, y, z;
+begin
+  x := 1;
+  y := 10;
+
+  write 3;
+end.
+
+Output:
+Variable expected after write
+===============================
+
+==============================
+Input:
+var f, n;
+begin
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+  f := 1;
+  n := 2;
+end.
+
+Output:
+Code has exceeded max length
+===============================
